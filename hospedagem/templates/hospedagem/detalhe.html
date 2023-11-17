@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block center %}
+  <h2> Hospedagem </h2>
+
+  <a href="{% url 'hospedagem_listar' %}" class="btn btn-danger mb-3">Voltar</a>
+
+  <ul class="list-group">
+    <h3>Data Entrada</h3>
+    <li class="list-group-item">{{hospedagem.data_entrada}}</li>
+    <h3>Data Saída</h3>
+    <li class="list-group-item">{{hospedagem.data_saida}}</li>
+    <h3>Valor</h3>
+    <li class="list-group-item">{{hospedagem.valor}}</li>
+    <h3>Cliente</h3>
+    <li class="list-group-item">{{ hospedagem.cliente }}</li>
+    <h3>Quarto</h3>
+    <li class="list-group-item">{{ hospedagem.quarto }}</li>
+  </ul>
+
+{% endblock %}
